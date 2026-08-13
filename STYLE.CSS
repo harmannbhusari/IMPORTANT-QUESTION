@@ -1,0 +1,707 @@
+/* =====================================
+   GENERAL
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+}
+
+
+/* =====================================
+   PAGE SYSTEM
+===================================== */
+
+.page {
+    width: 100vw;
+    height: 100vh;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.page.active {
+    display: flex;
+}
+
+
+/* =====================================
+   PAGE 1 BACKGROUND
+===================================== */
+
+#page1 {
+    background:
+        radial-gradient(
+            circle at top,
+            #ffe8f2 0%,
+            #f7b7d2 45%,
+            #c993d9 100%
+        );
+}
+
+
+/* =====================================
+   PAGE 2 BACKGROUND
+===================================== */
+
+#page2 {
+    background:
+        radial-gradient(
+            circle at top left,
+            #ffe0ed 0%,
+            #e9a9d3 45%,
+            #9c7bd4 100%
+        );
+}
+
+
+/* =====================================
+   GLASS CARDS
+===================================== */
+
+.intro-card,
+.question-card {
+
+    width: min(90%, 520px);
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background:
+        rgba(255, 255, 255, 0.38);
+
+    border:
+        2px solid rgba(255, 255, 255, 0.65);
+
+    border-radius: 35px;
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 25px 60px
+        rgba(90, 20, 90, 0.25);
+
+    z-index: 5;
+}
+
+
+/* =====================================
+   PAGE 1 TEXT
+===================================== */
+
+.intro-card h1 {
+
+    margin:
+        20px 0 10px;
+
+    color: #7d2756;
+
+    font-size: 42px;
+}
+
+.intro-text {
+
+    color: #67284c;
+
+    font-size: 19px;
+
+    margin:
+        10px 0 25px;
+}
+
+.tap-text {
+
+    color: #8b3567;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    animation:
+        blink 1.5s infinite;
+}
+
+
+/* =====================================
+   POOKIES
+===================================== */
+
+.pookies {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    gap: 18px;
+
+    height: 190px;
+}
+
+
+/* Individual pookie */
+
+.pookie {
+
+    position: relative;
+
+    width: 130px;
+
+    height: 180px;
+
+    animation:
+        pookieFloat 2.2s
+        ease-in-out infinite;
+}
+
+.pookie-right {
+    animation-delay: 0.5s;
+}
+
+
+/* =====================================
+   POOKIE EARS
+===================================== */
+
+.ear {
+
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+
+    background: #c88b68;
+
+    border:
+        4px solid #9a5d42;
+
+    border-radius: 50%;
+
+    top: 5px;
+
+    z-index: 1;
+}
+
+.left-ear {
+    left: 5px;
+}
+
+.right-ear {
+    right: 5px;
+}
+
+
+/* =====================================
+   POOKIE FACE
+===================================== */
+
+.face {
+
+    position: absolute;
+
+    left: 15px;
+    top: 22px;
+
+    width: 100px;
+    height: 92px;
+
+    background: #d39a76;
+
+    border:
+        4px solid #9a5d42;
+
+    border-radius: 50%;
+
+    z-index: 3;
+}
+
+
+/* Eyes */
+
+.eye {
+
+    position: absolute;
+
+    top: 32px;
+
+    width: 11px;
+    height: 15px;
+
+    background: #3a2118;
+
+    border-radius: 50%;
+}
+
+.left-eye {
+    left: 28px;
+}
+
+.right-eye {
+    right: 28px;
+}
+
+
+/* Blush */
+
+.blush {
+
+    position: absolute;
+
+    top: 52px;
+
+    width: 18px;
+    height: 9px;
+
+    background: #ed8fae;
+
+    border-radius: 50%;
+
+    opacity: 0.7;
+}
+
+.left-blush {
+    left: 10px;
+}
+
+.right-blush {
+    right: 10px;
+}
+
+
+/* Nose */
+
+.nose {
+
+    position: absolute;
+
+    left: 41px;
+    top: 47px;
+
+    width: 18px;
+    height: 14px;
+
+    background: #4b281d;
+
+    border-radius: 50%;
+}
+
+
+/* Cute smile */
+
+.mouth {
+
+    position: absolute;
+
+    left: 41px;
+    top: 60px;
+
+    width: 18px;
+    height: 9px;
+
+    border-bottom:
+        3px solid #4b281d;
+
+    border-radius: 50%;
+}
+
+
+/* =====================================
+   POOKIE BODY
+===================================== */
+
+.body {
+
+    position: absolute;
+
+    left: 8px;
+    top: 96px;
+
+    width: 115px;
+    height: 95px;
+
+    background: #c88b68;
+
+    border:
+        4px solid #9a5d42;
+
+    border-radius:
+        55% 55% 45% 45%;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.body span {
+
+    font-size: 38px;
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+
+/* =====================================
+   HEART BETWEEN POOKIES
+===================================== */
+
+.between-heart {
+
+    font-size: 45px;
+
+    margin-bottom: 80px;
+
+    animation:
+        heartbeat 1s infinite;
+}
+
+
+/* =====================================
+   PAGE 2
+===================================== */
+
+.question-card {
+
+    min-height: 410px;
+}
+
+
+/* Big heart */
+
+.big-heart {
+
+    font-size: 80px;
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+
+/* Question */
+
+.question-card h1 {
+
+    margin:
+        10px 0;
+
+    color: #762452;
+
+    font-size: 38px;
+}
+
+.question-text {
+
+    color: #67284c;
+
+    font-size: 18px;
+}
+
+
+/* =====================================
+   BUTTON AREA
+===================================== */
+
+.buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 35px;
+
+    min-height: 70px;
+}
+
+
+/* Both buttons */
+
+button {
+
+    border: none;
+
+    padding:
+        15px 30px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+/* YES */
+
+#yesBtn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f9a,
+            #e52d78
+        );
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px
+        rgba(200, 30, 110, 0.3);
+
+    z-index: 10;
+}
+
+#yesBtn:hover {
+
+    transform:
+        scale(1.1);
+}
+
+
+/* =====================================
+   NO BUTTON
+===================================== */
+
+#noBtn {
+
+    position: relative;
+
+    background: white;
+
+    color: #b52d6d;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+
+    z-index: 20;
+
+    min-width: 100px;
+
+    min-height: 50px;
+}
+
+
+/* Normal NO text */
+
+#noText {
+    display: inline;
+}
+
+
+/* Think message */
+
+#thinkMessage {
+
+    display: none;
+
+    position: fixed;
+
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    white-space: nowrap;
+    z-index: 30;
+    pointer-events: none;
+
+    color: #b52d6d;
+}
+
+
+/* After mouse approaches */
+
+#noBtn.show-message #noText {
+    display: none;
+}
+
+#noBtn.show-message #thinkMessage {
+    display: inline;
+}
+
+
+/* =====================================
+   ANSWER
+===================================== */
+
+#answer {
+
+    min-height: 35px;
+
+    margin-top: 25px;
+
+    color: #9b1f62;
+
+    font-size: 23px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================
+   FLOATING HEARTS
+===================================== */
+
+.floating-hearts span {
+
+    position: absolute;
+
+    bottom: -60px;
+
+    font-size: 28px;
+
+    opacity: 0.7;
+
+    z-index: 1;
+
+    animation:
+        floatingHeart 7s
+        linear infinite;
+}
+
+
+/* Different positions */
+
+.floating-hearts span:nth-child(1) {
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 45%;
+    animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 65%;
+    animation-delay: 3s;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 80%;
+    animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(6) {
+    left: 92%;
+    animation-delay: 1.5s;
+}
+
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes pookieFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(-2deg);
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            rotate(2deg);
+    }
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.2);
+    }
+}
+
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}
+
+
+@keyframes floatingHeart {
+
+    0% {
+        bottom: -60px;
+
+        transform:
+            translateX(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        bottom: 110%;
+
+        transform:
+            translateX(50px)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
